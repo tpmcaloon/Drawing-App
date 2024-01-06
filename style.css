@@ -1,0 +1,84 @@
+html, body {
+  margin: 0px;
+  height: 100%;
+}
+
+#sidebar {
+	grid-area: sidebar;
+	overflow-y: scroll;
+	width: 150px;
+
+}
+
+#content {
+	grid-area: content;
+}
+
+.header {
+	grid-area: header;
+	font-family: Helvetica, sans-serif
+}
+
+.footer{
+  grid-area: footer;
+}
+
+.sideBarItem{
+	max-height: 50px;
+	max-width: 50px;
+	padding:10px;
+	padding-left: 15px;
+}
+
+.sideBarItem img{
+	max-height: 50px;
+	max-Width:50px;
+}
+
+
+.options{
+	grid-area: options;
+	padding: 15px;
+}
+
+
+	.wrapper {
+		display: grid;
+		height: 100%;
+		grid-template-columns: 125px 130px  minmax(500px, 1fr);
+		grid-template-rows: 35px minmax(500px, 1fr) 160px;
+		grid-template-areas:
+		"header header header"
+		"sidebar content content"
+		"colourP colourP options";
+		background-color: #fff;
+		color: #444;
+	}
+
+.box {
+  background-color: #444;
+  color: #fff;
+  font-size: 150%;
+}
+
+.header {
+  background-color: #999;
+}
+
+input[type="color"] {
+	width: 120px;	
+	height: auto;
+}
+
+input[type="range"] {
+	display: block;
+	/*min and max changes size of slider?*/
+	height: 320px;
+	min-width: 260px;
+	max-width: 640px;
+	height: 50px;
+	width: 750px;
+	margin: auto;
+	margin-top: 45%;
+	position: relative;
+} 

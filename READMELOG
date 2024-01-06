@@ -1,0 +1,143 @@
+******** 26/03/2021 ********
+so far we have tried to implement an eraser tool and the editable shape tool. 
+
+    ~ ERASER TOOL ~
+- added eraser tool to sidebar
+- created the eraser tool to essentially just 'draw' white. 
+* at the moment it is slightly broken when switching from the eraser to other tools ~ e.g. when switching back to freehand tool, a colour needs to be reselected for it to work.
+
+- plan to play around with the colour palette to get this working smoothly.
+- plan to add the ability to change size (strokeWeight) of the eraser.
+
+
+    ~ EDITABLE SHAPE TOOL ~
+- added shape tool to sidebar
+- made a start with the editable shape tool, drawing new vertices and being able to edit them.
+* currently the constructor is broken ~ this tool is a work in progress.
+
+- plan to add a choice of shapes to draw inc: squares, circles, triangles and stars. 
+- plan to add ability to change strokeWeight of shape.
+
+
+
+
+
+******** 12/04/2021 ********
+
+    ~ ERASER TOOL ~
+- eraser tool has now been fixed when switching between other tools, works as intended
+* had a play around creating a button to increase the strokeWeight of eraser but it ended up changing the strokeWeight for other tools (line tool and spray can)
+
+
+    ~ FREEHAND TOOL ~
+- added the same button to the freehand tool to change between strokeWeight 
+
+- plan to look into a slider tool for the strokeWeight size of all tools in the app
+- plan to add a colour picker to allow a wider range of colours to be used
+
+
+
+
+
+******** 20/04/2021 ********
+
+    ~ COLOUR PALETTE ~
+- implemented a colour picker to replace the previous colour palette, this allows for a wider range of colours
+* currently this is broken, when opening the different tools it repeatedly opens the colour picker
+
+
+    ~ SHAPE TOOL ~
+- decided to create our own shape tool as unfortunately couldn't get the previous editable shape to work.
+- this tool works more like a stamp tool rather than drawing the shape, currently stamps a square on mouse click.
+* at the moment the stamp can only draw a square of one size
+
+- plan to add a choice of shapes that can be drawn including circles, trangles and stars.
+- plan to add the ability to change the size of the shape.
+
+
+
+
+
+
+******** 23/04/2021 ********
+    ~ COLOUR PALETTE ~
+- colour picker has now been fixed, can be used for each tool without any errors 
+
+
+    ~ STROKE WEIGHT SLIDER ~
+- implemented a slider tool for changing the stroke weight
+- the slider can be used for all tools including the shape tool (chose the slider option instead of using the previous buttons that were added)
+- stroke weight goes from a minimum of 1px up to a maximum of 250px
+* issue with the line tool, when using the slider the line shows at the bottom of the screen (possibly to do with canvas boundaries)
+
+- plan to look into the line tool to correct the issue with the canvas 
+
+
+
+
+
+******** 27/03/2021 ********
+    ~ COLOUR PALETTE ~
+- added another colour picker, one colour picker can be used to select the stroke colour (left side) and the second colour picker can be used to select the fill colour (right side)
+- this fill colour picker is for use with the shape tool
+* issue when switching between tools the fill colour does not show on certain shapes ~ possibly something to do with the stroke weight slider 
+
+
+
+
+
+
+******** 28/04/2021 ********
+    ~ LINE TOOL ~
+- looked into canvas boundary issue, added an if statement to reduce boundaries 
+* in some cases a line is still being drawn if you drag your mouse upwards whilst using the slider 
+
+- plan to look into this to avoid random lines being drawn
+
+
+    ~ MIRROR TOOL ~
+- checked to see if stroke colour picker works on mirror tool, working as intended 
+* we've noticed that the guide mirror line has disappeared since adding colour pickers/stroke weight slider
+
+- plan to look into a fix for guidance lines 
+
+
+
+
+
+******** 03/05/2021 ********
+    ~ SHAPE TOOL ~
+- we have now added 2 more shapes to our stamp tool, can now choose triangles and stars
+- stamps shape on mouseclick
+
+- plan to add a button so that the user can switch between shapes when using the tool 
+
+
+
+
+
+******** 04/05/2021 ********
+    ~ SHAPE TOOL ~
+- added a dropdown menu to allow the user to switch between the different shapes 
+* currently the dropdown is always displaying no matter which tool you are on
+
+- plan to look into only displaying dropdown once shape tool is open
+
+
+
+
+
+******** 06/05/2021 ********
+    ~ DRAWING APP TUTORIAL ~
+- added a tutorial, on opening there is a tutorial that goes through and explains each function of the application (this was just a fun addition)
+
+    ~ COMMENTING ~
+- went through all of the code to double check for comments
+- clearly commented throughout
+
+
+
+
+******** 07/05/2021 ********
+    ~ SHAPE TOOL ~
+- decided to add additional shapes to the shape tool including a circle and oval

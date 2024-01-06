@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="lib/p5.min.js"></script>
+
+    <script src="sketch.js"></script>
+
+    <!-- add extra scripts below -->
+    <script src="toolbox.js"></script>
+    <script src="colourPalette.js"></script>
+    <script src="helperFunctions.js"></script>
+
+    <script src="freehandTool.js"></script>
+    <script src="lineToTool.js"></script>
+    <script src="sprayCanTool.js"></script>
+    <script src="mirrorDrawTool.js"></script>
+
+    
+    <!-- additional extension scripts --> 
+    <script src="eraserTool.js"></script>
+    <script src="shapeTool.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/intro.js/introjs.css">
+  </head>
+  <body>
+    <a href='http://google.com/' data-intro="Hello, this is a brief tutorial on how to use 'My Drawing App'"></a>
+
+    <div class="wrapper"> 
+      <div class="box header">My Drawing App
+
+        <button id="clearButton" data-title="The Clear Button" data-intro="Use this button whenever you'd like to clear the canvas"></data-title>Clear</button>
+        <button id="saveImageButton" data-title="The Save Button" data-intro="Click here whenever you would like to save your masterpiece"></data-title>Save Image</button>
+
+        <select id="Shapes" data-title="Shape Selector" data-intro="Click here when using the Shapes Tool to choose which shape you'd like to use"></data-title>
+          <option value="1">Square</option>
+          <option value="2">Triangle</option>
+          <option value="3">Star</option>
+          <option value="4">Circle</option>
+          <option value="5">Oval</option>
+      </select>
+      
+      <input type="range" min="1" max="250" value="5" class="slider" data-title="Stroke/Size Slider" data-intro="Use this slider to determine the thickness of the brush/pen or to alter the shape sizes" id="strokeWeight">        
+
+      <script src="shapeTool.js"></script>
+      <script src="node_modules/intro.js/intro.js"></script>
+
+      </div>
+      <div class="box" data-title="The Toolbox" data-intro="This is where you'll find your artistic tools to transform the canvas into a piece of art" id="sidebar"></div>
+      <input data-title="The Stroke Colour Palette" data-intro="This colour palette is for the initial strokes or outer lines of the shapes" id="colourPaletteStroke" type="color">
+      <input data-title="The Fill Colour Palette" data-intro="This colour palette is for filling in the shapes as you paint them onto the canvas" id="colourPaletteFill" type="color">
+      <div id="content"></div>
+      <div class="box options"></div>
+      <div class="box strokeWeight"></div>
+      
+      <script>introJs().start()</script>
+  </body>
+</html>
